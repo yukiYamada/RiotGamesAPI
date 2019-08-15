@@ -1,11 +1,12 @@
 import unittest
-import summoner
+import unittest.mock 
+from summoner.api_connect import Api_Connect
 
-class Test_MyFirstApi(unittest.TestCase):
+class Test_Api_Connect(unittest.TestCase):
     def setUp(self):
         print("setup-start")
         self.apikey = "apikey"
-        self.actualObj = summoner.summoner.Summoner(self.apikey)
+        self.actualObj = Api_Connect(self.apikey)
         print("setup-end")
 
     def test_create_url(self):

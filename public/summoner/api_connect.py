@@ -1,9 +1,9 @@
 import unittest
 import urllib.request as urllib2
 import json
-from summoner.info import Info
+from . import info
 
-class Summoner():    
+class Api_Connect():    
     def __init__(self, apikey):
         self._api_key = "api_key=" + apikey
         self._apiurl_byname = "https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/"
@@ -14,7 +14,7 @@ class Summoner():
         try:
             session = urllib2.urlopen(url)
             summoner = json.loads(session.read().decode('utf-8'))
-            return Info(summoner[summoner_name.lower()])
+            return info.Info(summoner)
         
         except Exception as e:
             raise Exception(e)       
