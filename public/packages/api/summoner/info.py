@@ -1,5 +1,3 @@
-import json
-
 class Info():
     def __init__(self, summoner_dto):
         self._dto = summoner_dto
