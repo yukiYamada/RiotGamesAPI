@@ -9,6 +9,6 @@ class Reader(reader_base.Reader_Base):
     
     def get_by_account_id(self, account_id):
         print("Match.Reader.py:get")
-        api_key = self._api_url + "by-account/"
+        last_path = "by-account/" + account_id
 
-        return match_list.Match_List(self.get(api_key, account_id))
+        return match_list.Match_List(self.get(last_path))

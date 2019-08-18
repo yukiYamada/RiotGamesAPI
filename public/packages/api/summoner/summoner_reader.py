@@ -9,6 +9,6 @@ class Reader(reader_base.Reader_Base):
 
     def get_by_summoner(self, summoner_name):
         print("Summoner.Reader.py:get")      
-        api_url = self._api_url + "by-name/"  
+        lastpath = "by-name/" + summoner_name
 
-        return info.Info(self.get(api_url, summoner_name))
+        return info.Info(self.get(lastpath))
