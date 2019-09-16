@@ -29,5 +29,3 @@ class Info():
     @property
     def account_id(self):
         return self._dto["accountId"]
-
-

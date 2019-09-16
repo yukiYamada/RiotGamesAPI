@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block body %}
+<form action="./summoner_info" method="post" class="simple_box">
+    <div class="login_block">
+        <p>api_key：<input type="text" name="api_key"></p>
+        <p>summoner_name：<input type="text" name="summoner_name"></p>
+        <p><input type="submit" value="api_key,summoner_nameでRiotAPIにアクセスします。"></p>
+    </div>
+</form>
+{% endblock %}

@@ -1,3 +1,5 @@
+from datetime import datetime
+
 class Match_Reference():
     def __init__(self, match_reference_dto):
         self._dto = match_reference_dto
@@ -29,7 +31,14 @@ class Match_Reference():
     @property
     def role(self):
         return self._dto["role"]
-
+    
     @property
     def timestamp(self):
         return self._dto["timestamp"]
+
+    @property
+    def gametime(self):
+        """
+        get dto timestamp. converted datetime.
+        """
+        return datetime.fromtimestamp(self.timestamp)
