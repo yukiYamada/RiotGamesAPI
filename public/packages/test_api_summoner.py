@@ -1,6 +1,6 @@
 import unittest
 from mock import MagicMock, patch
-from api.summoner.reader import Reader
+from api.summoner.summoner_reader import Reader
 from api.summoner.info import Info
 import urllib.request as urllib2
 

@@ -1,0 +1,8 @@
+@charset 'utf-8';
+
+.simple_box{
+    border: 1px solid;
+}
+.login_block{
+    display: inline;
+}
